@@ -1,0 +1,56 @@
+window {
+  background-color: #1e1e2e;   /* base */
+  border-radius: 12px;
+  border: 2px solid #cba6f7;   /* mauve accent */
+}
+
+/* Search bar */
+#input {
+  background-color: #181825;   /* mantle */
+  color: #cdd6f4;
+  border: none;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+/* Entries */
+#entry {
+  padding: 8px 12px;
+  margin: 4px 8px;
+  color: #cdd6f4;
+  border-radius: 8px;
+}
+
+/* Selected entry */
+#entry:selected {
+  background-color: #cba6f7;   /* mauve */
+  color: #1e1e2e;
+}
+
+/* Hover (mouse) */
+#entry:hover {
+  background-color: #313244;   /* surface0 */
+}
+
+#outer-box {
+  margin: 10px;
+}
+
+#scroll {
+  margin: 5px;
+}
+
+#text {
+  margin-left: 5px;
+}
+
+window {
+  background-color: rgba(30, 30, 46, 0.95); /* instead of solid */
+  border-radius: 12px;
+  border: 2px solid #cba6f7;
+}
+
+#outer-box {
+  background-color: transparent;
+}
