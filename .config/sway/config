@@ -249,3 +249,17 @@ input * {
     accel_profile flat
     pointer_accel 0.5
 }
+
+# Color scheme stuff
+
+# Catppuccin Mocha colors
+set $bg     #1e1e2e
+set $fg     #cdd6f4
+set $accent #89b4fa
+set $inactive #6c7086
+
+# Window borders
+client.focused          $accent $bg $fg $accent $accent
+client.unfocused        $bg $bg $inactive $bg $bg
+client.focused_inactive $bg $bg $inactive $bg $bg
+client.urgent           #f38ba8 $bg $fg #f38ba8 #f38ba8
