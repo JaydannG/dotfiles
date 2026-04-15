@@ -24,7 +24,8 @@ exec_always waybar
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/Pictures/Wallpapers/evening-sky.png fill
 #
 # Example configuration:
 #
@@ -235,9 +236,8 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 
 # Stuff to remove borders and title bars
-default_border none
-default_floating_border none
-hide_edge_borders both
+default_border pixel 2
+default_floating_border pixel 2
 titlebar_padding 1
 titlebar_border_thickness 0
 
@@ -250,16 +250,27 @@ input * {
     pointer_accel 0.5
 }
 
-# Color scheme stuff
+default_border pixel 2
+default_floating_border pixel 2
 
-# Catppuccin Mocha colors
-set $bg     #1e1e2e
-set $fg     #cdd6f4
-set $accent #89b4fa
-set $inactive #6c7086
+set $base      #1e1e2e
+set $text      #cdd6f4
+set $mauve     #cba6f7
+set $surface0  #313244
+set $subtext0  #a6adc8
 
-# Window borders
-client.focused          $accent $bg $fg $accent $accent
-client.unfocused        $bg $bg $inactive $bg $bg
-client.focused_inactive $bg $bg $inactive $bg $bg
-client.urgent           #f38ba8 $bg $fg #f38ba8 #f38ba8
+# border background text indicator child_border
+client.focused          $mauve   $base $text $base     $mauve
+client.focused_inactive $surface0 $base $subtext0 $base $surface0
+client.unfocused        $surface0 $base $subtext0 $base $surface0
+client.urgent           #f38ba8  $base $text #f38ba8   #f38ba8
+# Inner gaps (between windows)
+gaps inner 10
+
+# Outer gaps (between windows and screen edge)
+gaps outer 6
+
+smart_gaps on
+smart_borders on
+
+corner_radius 10
