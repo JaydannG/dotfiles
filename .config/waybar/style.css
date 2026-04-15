@@ -14,7 +14,7 @@ window#waybar {
 }
 
 #workspaces button {
-  color: #bac2de;
+  color: #bac2de;              /* subtext1 */
   padding: 0 10px;
   margin: 4px 3px;
   border-radius: 8px;
@@ -22,13 +22,14 @@ window#waybar {
 }
 
 #workspaces button.focused {
-  background: #89b4fa;
-  color: #1e1e2e;
+  background: #cba6f7;         /* mauve */
+  color: #1e1e2e;              /* base */
+  border-radius: 8px;
 }
 
 #workspaces button:hover {
-  background: #313244;
-  color: #cdd6f4;
+  background: #313244;         /* surface0 */
+  color: #cdd6f4;              /* text */
 }
 
 #clock,
