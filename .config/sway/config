@@ -274,3 +274,10 @@ smart_gaps on
 smart_borders on
 
 corner_radius 10
+
+input "1267:12970:VEN_04F3:00_04F3:32AA_Touchpad" {
+    pointer_accel 0.6
+    scroll_factor 0.4
+    natural_scroll enabled
+    tap enabled
+}
